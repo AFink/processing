@@ -1,3 +1,4 @@
+// Andreas Fink 2019
 class PUNKT
 {
   private int x;
