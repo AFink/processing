@@ -177,14 +177,7 @@ class ELLIPSE
     strokeg = gneu;
     strokeb = bneu;
   }
-  /*
-  void SetzeVariables(int xneu, int yneu,int radiusneu) // optional, hilft andi
-   {
-   x = xneu;
-   y = yneu;
-   radius = radiusneu;
-   }
-   */
+
   void Zeichne()
   {
     if (stroke = true) {
