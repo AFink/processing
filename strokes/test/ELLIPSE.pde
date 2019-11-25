@@ -5,9 +5,11 @@ class ELLIPSE
   private int y;
   private int radiusx;
   private int radiusy;
+  private boolean fill;
   private float fillr;
   private float fillg;
   private float fillb;
+  private boolean stroke;
   private int strokew;
   private float stroker;
   private float strokeg;
@@ -19,9 +21,11 @@ class ELLIPSE
     y = 200;
     radiusx = 50;
     radiusy = 40;
+    fill = true;
     fillr = 0;
     fillg = 255;
     fillb = 0;
+    stroke = true;
     strokew = 1;
     stroker = 0;
     strokeg = 0;
@@ -34,9 +38,11 @@ class ELLIPSE
     y = yneu;
     radiusx = radius;
     radiusy = radius;
+    fill = true;
     fillr = 0;
     fillg = 255;
     fillb = 0;
+    stroke = true;
     strokew = 1;
     stroker = 0;
     strokeg = 0;
@@ -50,9 +56,11 @@ class ELLIPSE
     y = yneu;
     radiusx = radiusxneu;
     radiusy = radiusyneu;
+    fill = true;
     fillr = 0;
     fillg = 255;
     fillb = 0;
+    stroke = true;
     strokew = 1;
     stroker = 0;
     strokeg = 0;
@@ -72,6 +80,9 @@ class ELLIPSE
   int GibRadiusY() {
     return radiusy;
   }
+  boolean GibFill() {
+    return fill;
+  }
   float GibFillR() {
     return fillr;
   }
@@ -80,6 +91,9 @@ class ELLIPSE
   }
   float GibFillB() {
     return fillb;
+  }
+  boolean GibStroke() {
+    return stroke;
   }
   int GibStrokeW() {
     return strokew;
@@ -110,6 +124,9 @@ class ELLIPSE
   {
     radiusy = radiusyneu;
   }
+  void SetzeFill(boolean fillneu) {
+    fill = fillneu;
+  }
   void SetzeFillR(float rneu)
   {
     fillr = rneu;
@@ -121,6 +138,9 @@ class ELLIPSE
   void SetzeFillB(float bneu)
   {
     fillb = bneu;
+  }
+  void SetzeStroke(boolean strokeneu) {
+    stroke = strokeneu;
   }
   void SetzeStrokeW(int strokewneu)
   {
@@ -168,9 +188,17 @@ class ELLIPSE
    */
   void Zeichne()
   {
-    stroke(stroker,strokeg,strokeb);
+    if (stroke = true) {
+      stroke(stroker, strokeg, strokeb);
+    } else {
+      noStroke();
+    };
     strokeWeight(strokew);
-    fill(fillr, fillg, fillb);
+    if (fill = true) {
+      fill(fillr, fillg, fillb);
+    } else {
+      noFill();
+    };
     ellipse(x, y, radiusx, radiusy);
   }
 }
