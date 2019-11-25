@@ -41,7 +41,7 @@ class ELIPSE
     fill = true;
     fillr = 0;
     fillg = 255;
-    fillb = 255;
+    fillb = 0;
     stroke = true;
     strokew = 1;
     stroker = 0;
@@ -192,6 +192,6 @@ class ELIPSE
     } else {
       noFill();
     };
-    ellipse(x, y, radiusx, radiusy);
+    ellipse(x, y, round(radiusx/2), round(radiusy/2)); // /2 because ellipse(x,y,width,height)
   }
 }
