@@ -200,13 +200,13 @@ class DREIECK
 
   void Zeichne()
   {
-    if (stroke = true) {
+    if (stroke == true) {
       stroke(stroker, strokeg, strokeb);
     } else {
       noStroke();
     };
     strokeWeight(strokew);
-    if (fill = true) {
+    if (fill == true) {
       fill(fillr, fillg, fillb);
     } else {
       noFill();

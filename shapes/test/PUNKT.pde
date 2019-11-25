@@ -95,7 +95,7 @@ class PUNKT
 
   void Zeichne()
   {
-    if (stroke = true) {
+    if (stroke == true) {
       stroke(stroker, strokeg, strokeb);
     } else {
       noStroke();

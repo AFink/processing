@@ -134,7 +134,8 @@ class ELIPSE
   {
     fillb = bneu;
   }
-  void SetzeStroke(boolean strokeneu) {
+  void SetzeStroke(boolean strokeneu)
+  {
     stroke = strokeneu;
   }
   void SetzeStrokeW(int strokewneu)
@@ -181,13 +182,13 @@ class ELIPSE
 
   void Zeichne()
   {
-    if (stroke = true) {
+    if (stroke == true) {
       stroke(stroker, strokeg, strokeb);
     } else {
       noStroke();
     };
     strokeWeight(strokew);
-    if (fill = true) {
+    if (fill == true) {
       fill(fillr, fillg, fillb);
     } else {
       noFill();
