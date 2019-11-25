@@ -31,7 +31,6 @@ class ELLIPSE
     strokeg = 0;
     strokeb = 0;
   }
-
   ELLIPSE(int xneu, int yneu, int radiusneu) //Konstruktor mit 3 Variablen -> Kreis
   {
     x = xneu;
@@ -48,8 +47,6 @@ class ELLIPSE
     strokeg = 0;
     strokeb = 0;
   }
-
-
   ELLIPSE(int xneu, int yneu, int radiusxneu, int radiusyneu)  //Konstruktor mit 4 Variablen -> Ellipse
   {
     x = xneu;
@@ -66,8 +63,6 @@ class ELLIPSE
     strokeg = 0;
     strokeb = 0;
   }
-
-
   int GibX() {
     return x;
   }
@@ -107,7 +102,6 @@ class ELLIPSE
   float GibStrokeB() {
     return strokeb;
   }
-
   void SetzeX(int xneu)
   {
     x = xneu;
@@ -158,13 +152,12 @@ class ELLIPSE
   {
     strokeb = bneu;
   }
-
   void SetzeKoordinaten(int xneu, int yneu)
   {
     x = xneu;
     y = yneu;
   }
-  void SetzeKreisRadius(int radiusneu) {
+  void SetzeRadius(int radiusneu) {
     radiusx = radiusneu;
     radiusy = radiusneu;
   }
@@ -172,11 +165,17 @@ class ELLIPSE
     radiusx = radiusxneu;
     radiusy = radiusyneu;
   }
-  void SetzeFarbe(float rneu, float gneu, float bneu)
+  void SetzeFillFarbe(float rneu, float gneu, float bneu)
   {
     fillr = rneu;
     fillg = gneu;
     fillb = bneu;
+  }
+  void SetzeStrokeFarbe(float rneu, float gneu, float bneu)
+  {
+    stroker = rneu;
+    strokeg = gneu;
+    strokeb = bneu;
   }
   /*
   void SetzeVariables(int xneu, int yneu,int radiusneu) // optional, hilft andi
