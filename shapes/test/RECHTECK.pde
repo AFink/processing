@@ -180,15 +180,6 @@ class RECHTECK
     strokeg = gneu;
     strokeb = bneu;
   }
-  /*
-  void SetzeVariables(int xneu,int yneu, int breiteneu, int hoeheneu) //Freiwillig, hilft Andi manchmal :D
-   {
-   x = xneu;
-   y = yneu;
-   hoehe = hoeheneu;
-   breite = breiteneu;
-   }
-   */
 
   void Zeichne()
   {
