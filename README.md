@@ -1,3 +1,3 @@
 # ExampleClasses
 
-Meine Klassen :), evtl kann sie jemand gebrauchen :D
+Meine Klassen für PROCESSING :), evtl kann sie jemand gebrauchen :D
