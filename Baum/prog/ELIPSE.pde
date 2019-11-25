@@ -193,6 +193,6 @@ class ELIPSE
     } else {
       noFill();
     };
-    ellipse(x, y, round(radiusx/2), round(radiusy/2)); // /2 because ellipse(x,y,width,height)
+    ellipse(x, y, round(radiusx/2), round(radiusy/2));
   }
 }
