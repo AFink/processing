@@ -163,10 +163,10 @@ class RECHTECK
     y = yneu;
   }
 
-  void SetzeGroesse(int hoeheneu, int breiteneu)
+  void SetzeGroesse(int breiteneu,int hoeheneu)
   {
-    hoehe = hoeheneu;
     breite = breiteneu;
+    hoehe = hoeheneu;
   }
 
   void SetzeFillFarbe(float rneu, float gneu, float bneu)

@@ -6,5 +6,7 @@ size(600,600);
   baum1= new BAUM();
 }
 void draw(){
+  background(#ffffff);
 baum1.Zeichne();
+baum1.Wachse();
 }
