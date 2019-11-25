@@ -32,7 +32,7 @@ class ELLIPSE
     strokeb = 0;
   }
 
-  ELLIPSE(int xneu, int yneu, int radius) //Konstruktor mit 3 Variablen -> Kreis
+  ELLIPSE(int xneu, int yneu, int radiusneu) //Konstruktor mit 3 Variablen -> Kreis
   {
     x = xneu;
     y = yneu;
