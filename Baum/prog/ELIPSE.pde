@@ -1,5 +1,5 @@
 // Andreas Fink 2019
-class ELLIPSE
+class ELIPSE
 {
 
   private int x;
@@ -16,7 +16,7 @@ class ELLIPSE
   private float strokeg;
   private float strokeb;
 
-  ELLIPSE()    // Konstruktor für eine Ellipse
+  ELIPSE()    // Konstruktor für eine Ellipse
   {
     x = 100;
     y = 200;
@@ -32,7 +32,7 @@ class ELLIPSE
     strokeg = 0;
     strokeb = 0;
   }
-  ELLIPSE(int xneu, int yneu, int radiusneu) //Konstruktor mit 3 Variablen -> Kreis
+  ELIPSE(int xneu, int yneu, int radiusneu) //Konstruktor mit 3 Variablen -> Kreis
   {
     x = xneu;
     y = yneu;
@@ -48,7 +48,7 @@ class ELLIPSE
     strokeg = 0;
     strokeb = 0;
   }
-  ELLIPSE(int xneu, int yneu, int radiusxneu, int radiusyneu)  //Konstruktor mit 4 Variablen -> Ellipse
+  ELIPSE(int xneu, int yneu, int radiusxneu, int radiusyneu)  //Konstruktor mit 4 Variablen -> Ellipse
   {
     x = xneu;
     y = yneu;
