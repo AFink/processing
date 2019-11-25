@@ -1,3 +1,4 @@
+//Andreas Fink 2019
 class DREIECK
 {
   private int x1;
