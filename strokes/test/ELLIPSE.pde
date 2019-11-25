@@ -36,8 +36,8 @@ class ELLIPSE
   {
     x = xneu;
     y = yneu;
-    radiusx = radius;
-    radiusy = radius;
+    radiusx = radiusneu;
+    radiusy = radiusneu;
     fill = true;
     fillr = 0;
     fillg = 255;
