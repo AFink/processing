@@ -114,7 +114,7 @@ class RECHTECK
     return isAbgerundet;
   }
   void abrunden(boolean wert) {
-   isAbgerundet = wert; 
+    isAbgerundet = wert;
   }
   void SetzeX(int xneu)
   {
@@ -173,7 +173,7 @@ class RECHTECK
     y = yneu;
   }
 
-  void SetzeGroesse(int breiteneu,int hoeheneu)
+  void SetzeGroesse(int breiteneu, int hoeheneu)
   {
     breite = breiteneu;
     hoehe = hoeheneu;
@@ -208,7 +208,7 @@ class RECHTECK
     if (isAbgerundet) {
       rect(x, y, breite, hoehe, 10);
     } else {
-    rect(x, y, breite, hoehe);
+      rect(x, y, breite, hoehe);
     }
   }
 }

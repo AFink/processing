@@ -15,11 +15,13 @@ class SCHAF {
     groesse = 50;
     richtung = "o";
     kopf = new ELIPSE(round(x - groesse*1.65), round(y - groesse/2), round(groesse*0.75));
+    kopf.SetzeFillFarbe(255, 255, 255);
     koerper = new ELIPSE(x, y, round(groesse*1.75), groesse);
     koerper.SetzeFillFarbe(255, 255, 255);
     beinv = new RECHTECK(round(x - groesse*0.875), round(y + groesse*0.85), round(groesse/4), round(groesse*1.25));
-    beinv.SetzeFillFarbe(100, 200, 100);
+    beinv.SetzeFillFarbe(0, 0, 0);
     beinh = new RECHTECK(round(x + groesse*0.875 - groesse/8), round(y + groesse*0.85), round(groesse/4), round(groesse*1.25));
+    beinh.SetzeFillFarbe(0, 0, 0);
   }
 
   int GibX() {
@@ -57,8 +59,6 @@ class SCHAF {
     y = yneu;
   }
 
-
-
   void Richtungswechsel() {
     if (richtung == "w") {
       richtung = "o";
@@ -77,7 +77,6 @@ class SCHAF {
       x = x + 1;
       kopf.SetzeKoordinaten(round(x + groesse*1.65), round(y - groesse/2));
     }
-
     koerper.SetzeKoordinaten(x, y);
     beinv.SetzeKoordinaten(round(x - groesse*0.875), round(y + groesse*0.85));
     beinh.SetzeKoordinaten(round(x + groesse*0.875 - groesse/8), round(y + groesse*0.85));

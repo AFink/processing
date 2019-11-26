@@ -1,4 +1,5 @@
 // Andreas Fink 2019
+//use ELLIPSE.pde and RECHTECK.pde from ../shapes/
 class BAUM
 {
   private int x;
@@ -6,7 +7,6 @@ class BAUM
   private int groesse;
   private ELIPSE krone;
   private RECHTECK stamm;
-
 
   BAUM()
   {
