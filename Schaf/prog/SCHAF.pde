@@ -1,3 +1,5 @@
+// Andreas Fink 2019
+//use ELLIPSE.pde and RECHTECK.pde from ../shapes/
 class SCHAF {
 
   private int x;

@@ -1,5 +1,4 @@
-//use ELLIPSE.pde and RECHTECK.pde from ../shapes/
-
+// Andreas Fink 2019
 SCHAF schaf1;
 
 void setup() {

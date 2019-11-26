@@ -1,7 +1,6 @@
 // Andreas Fink 2019
 class ELIPSE
 {
-
   private int x;
   private int y;
   private int radiusx;
