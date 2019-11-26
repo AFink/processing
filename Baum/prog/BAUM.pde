@@ -81,7 +81,7 @@ class BAUM
     groesse = groesse + 1;
     krone.SetzeKoordinaten(x, y - (round(groesse * 1.6)));
     krone.SetzeRadius(groesse*2);
-    stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));  
+    stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));
     stamm.SetzeGroesse(round(groesse * 0.2), round(groesse * 1.2));
   }
 

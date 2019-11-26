@@ -1,11 +1,10 @@
 // Andreas Fink 2019
-class ELIPSE
+class RECHTECK
 {
-
   private int x;
   private int y;
-  private int radiusx;
-  private int radiusy;
+  private int breite;
+  private int hoehe;
   private boolean fill;
   private float fillr;
   private float fillg;
@@ -16,12 +15,13 @@ class ELIPSE
   private float strokeg;
   private float strokeb;
 
-  ELIPSE()    // Konstruktor für eine Ellipse
+
+  RECHTECK()
   {
-    x = 100;
-    y = 200;
-    radiusx = 50;
-    radiusy = 40;
+    x = 300;
+    y = 400;
+    breite = 20;
+    hoehe = 80;
     fill = true;
     fillr = 0;
     fillg = 255;
@@ -32,28 +32,13 @@ class ELIPSE
     strokeg = 0;
     strokeb = 0;
   }
-  ELIPSE(int xneu, int yneu, int radiusneu) //Konstruktor mit 3 Variablen -> Kreis
-  {
-    x = xneu;
-    y = yneu;
-    radiusx = radiusneu;
-    radiusy = radiusneu;
-    fill = true;
-    fillr = 0;
-    fillg = 255;
-    fillb = 0;
-    stroke = true;
-    strokew = 1;
-    stroker = 0;
-    strokeg = 0;
-    strokeb = 0;
-  }
-  ELIPSE(int xneu, int yneu, int radiusxneu, int radiusyneu)  //Konstruktor mit 4 Variablen -> Ellipse
+
+  RECHTECK(int xneu, int yneu)
   {
     x = xneu;
     y = yneu;
-    radiusx = radiusxneu;
-    radiusy = radiusyneu;
+    breite = 20;
+    hoehe = 80;
     fill = true;
     fillr = 0;
     fillg = 255;
@@ -64,17 +49,35 @@ class ELIPSE
     strokeg = 0;
     strokeb = 0;
   }
+
+  RECHTECK(int xneu, int yneu, int breiteneu, int hoeheneu)
+  {
+    x = xneu;
+    y = yneu;
+    breite = breiteneu;
+    hoehe = hoeheneu;
+    fill = true;
+    fillr = 0;
+    fillg = 255;
+    fillb = 0;
+    stroke = true;
+    strokew = 1;
+    stroker = 0;
+    strokeg = 0;
+    strokeb = 0;
+  }
+
   int GibX() {
     return x;
   }
   int GibY() {
     return y;
   }
-  int GibRadiusX() {
-    return radiusx;
+  int GibBreite() {
+    return breite;
   }
-  int GibRadiusY() {
-    return radiusy;
+  int GibHoehe() {
+    return hoehe;
   }
   boolean GibFill() {
     return fill;
@@ -111,13 +114,13 @@ class ELIPSE
   {
     y = yneu;
   }
-  void SetzeRadiusX(int radiusxneu)
+  void SetzeBreite(int breiteneu)
   {
-    radiusx = radiusxneu;
+    breite = breiteneu;
   }
-  void SetzeRadiusY(int radiusyneu)
+  void SetzeHoehe(int hoeheneu)
   {
-    radiusy = radiusyneu;
+    hoehe = hoeheneu;
   }
   void SetzeFill(boolean fillneu) {
     fill = fillneu;
@@ -134,8 +137,7 @@ class ELIPSE
   {
     fillb = bneu;
   }
-  void SetzeStroke(boolean strokeneu)
-  {
+  void SetzeStroke(boolean strokeneu) {
     stroke = strokeneu;
   }
   void SetzeStrokeW(int strokewneu)
@@ -154,19 +156,19 @@ class ELIPSE
   {
     strokeb = bneu;
   }
+
   void SetzeKoordinaten(int xneu, int yneu)
   {
     x = xneu;
     y = yneu;
   }
-  void SetzeRadius(int radiusneu) {
-    radiusx = radiusneu;
-    radiusy = radiusneu;
+
+  void SetzeGroesse(int breiteneu,int hoeheneu)
+  {
+    breite = breiteneu;
+    hoehe = hoeheneu;
   }
-  void SetzeRadien(int radiusxneu, int radiusyneu) {
-    radiusx = radiusxneu;
-    radiusy = radiusyneu;
-  }
+
   void SetzeFillFarbe(float rneu, float gneu, float bneu)
   {
     fillr = rneu;
@@ -193,6 +195,6 @@ class ELIPSE
     } else {
       noFill();
     };
-    ellipse(x, y, radiusx * 2, radiusy * 2);
+    rect(x, y, breite, hoehe);
   }
 }

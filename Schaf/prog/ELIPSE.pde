@@ -134,7 +134,7 @@ class ELIPSE
   {
     fillb = bneu;
   }
-  void SetzeStroke(boolean strokeneu)
+  void SetzeStroke(boolean strokeneu) 
   {
     stroke = strokeneu;
   }
