@@ -1,4 +1,4 @@
-// Andreas Fink 2019
+// Andreas Fink 2019 und JMARyA lel
 class RECHTECK
 {
   private int x;
@@ -14,6 +14,7 @@ class RECHTECK
   private float stroker;
   private float strokeg;
   private float strokeb;
+  private boolean isAbgerundet;
 
 
   RECHTECK()
@@ -31,6 +32,7 @@ class RECHTECK
     stroker = 0;
     strokeg = 0;
     strokeb = 0;
+    isAbgerundet = false;
   }
 
   RECHTECK(int xneu, int yneu)
@@ -48,6 +50,7 @@ class RECHTECK
     stroker = 0;
     strokeg = 0;
     strokeb = 0;
+    isAbgerundet = false;
   }
 
   RECHTECK(int xneu, int yneu, int breiteneu, int hoeheneu)
@@ -65,6 +68,7 @@ class RECHTECK
     stroker = 0;
     strokeg = 0;
     strokeb = 0;
+    isAbgerundet = false;
   }
 
   int GibX() {
@@ -105,6 +109,12 @@ class RECHTECK
   }
   float GibStrokeB() {
     return strokeb;
+  }
+  boolean istAbgerundet() {
+    return isAbgerundet;
+  }
+  void abrunden(boolean wert) {
+   isAbgerundet = wert; 
   }
   void SetzeX(int xneu)
   {
@@ -195,6 +205,10 @@ class RECHTECK
     } else {
       noFill();
     };
+    if (isAbgerundet) {
+      rect(x, y, breite, hoehe, 10);
+    } else {
     rect(x, y, breite, hoehe);
+    }
   }
 }
