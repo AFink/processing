@@ -1,6 +1,7 @@
 // Andreas Fink 2019
 class ELIPSE
 {
+
   private int x;
   private int y;
   private int radiusx;
@@ -192,6 +193,6 @@ class ELIPSE
     } else {
       noFill();
     };
-    ellipse(x, y, radiusx * 2, radiusy * 2);
+    ellipse(x, y,radiusx*2,radiusy*2);
   }
 }
