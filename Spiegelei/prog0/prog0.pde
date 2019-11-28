@@ -9,4 +9,5 @@ void setup()
 void draw()
 {
   hans.Zeichne();
+  println(hans.Gibx());    //wenn in der Angebe steht X vom Spiegelei in die Console schreiben
 }

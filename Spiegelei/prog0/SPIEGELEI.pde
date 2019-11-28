@@ -28,7 +28,7 @@ class SPIEGELEI
   
   void Zeichne()
   {
-    fill(255,255,255);    //wir wollen das Eiklar jedes mal weiß haben
+    fill(255,255,255);    //wir wollen das Eiklar jedes mal weiß haben      //ist zwar nicht gut gelöst aber funktioniert :3 //ihr könnt gern mal probieren das erste fill wegzulassen. mal schauen was passiert
     eiklar.Zeichne();
     fill(255,255,0);      //und das eiGELB gelb ;)
     eigelb.Zeichne();
