@@ -14,7 +14,7 @@ class BAUM
     x = 400;
     y = 300;
 
-    krone = new ELIPSE(x, y - (round(groesse * 1.6)), groesse*2);
+    krone = new ELIPSE(x, y - (round(groesse * 1.6)), groesse/2);
     stamm = new RECHTECK(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2), round(groesse * 0.2), round(groesse * 1.2));
 
     krone.SetzeFillFarbe(69, 133, 108);
@@ -29,7 +29,7 @@ class BAUM
     x = xneu;
     y = yneu;
 
-    krone = new ELIPSE(x, y - (round(groesse * 1.6)), groesse*2);
+    krone = new ELIPSE(x, y - (round(groesse * 1.6)), groesse/2);
     stamm = new RECHTECK(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2), round(groesse * 0.2), round(groesse * 1.2));
 
     krone.SetzeFillFarbe(69, 133, 108);
@@ -45,7 +45,7 @@ class BAUM
     y = yneu;
 
 
-    krone = new ELIPSE(x, y - (round(groesse * 1.6)), groesse*2);
+    krone = new ELIPSE(x, y - (round(groesse * 1.6)), groesse/2);
     stamm = new RECHTECK(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2), round(groesse * 0.2), round(groesse * 1.2));
 
     krone.SetzeFillFarbe(69, 133, 108);
@@ -134,7 +134,7 @@ class BAUM
   void Wachse() {
     groesse = groesse + 1;
     krone.SetzeKoordinaten(x, y - (round(groesse * 1.6)));
-    krone.SetzeRadius(groesse*2);
+    krone.SetzeRadius(groesse/2);
     stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));
     stamm.SetzeGroesse(round(groesse * 0.2), round(groesse * 1.2));
   }
