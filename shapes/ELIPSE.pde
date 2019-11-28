@@ -134,7 +134,7 @@ class ELIPSE
   {
     fillb = bneu;
   }
-  void SetzeStroke(boolean strokeneu)
+  void SetzeStroke(boolean strokeneu) 
   {
     stroke = strokeneu;
   }
@@ -193,6 +193,6 @@ class ELIPSE
     } else {
       noFill();
     };
-    ellipse(x, y, radiusx * 2, radiusy * 2);
+    ellipse(x, y,radiusx*2,radiusy*2);
   }
 }
