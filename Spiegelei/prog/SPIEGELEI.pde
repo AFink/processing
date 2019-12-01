@@ -54,10 +54,14 @@ class SPIEGELEI
   void SetzeX(int xneu)
   {
     x = xneu;
+        eiklar.SetzeKoordinaten(x,y);
+    eigelb.SetzeKoordinaten(x,y);
   }
   void SetzeY(int yneu)
   {
     y = yneu;
+        eiklar.SetzeKoordinaten(x,y);
+    eigelb.SetzeKoordinaten(x,y);
   }
 
   void SetzeGroesse(int groesseneu)
@@ -68,6 +72,8 @@ class SPIEGELEI
   {
     x = xneu;
     y = yneu;
+    eiklar.SetzeKoordinaten(x,y);
+    eigelb.SetzeKoordinaten(x,y);
   }
 
 
