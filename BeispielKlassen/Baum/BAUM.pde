@@ -65,17 +65,33 @@ class BAUM
   }
   void SetzeX(int xneu) {
     x = xneu;
+krone.SetzeKoordinaten(x, y - (round(groesse * 1.6)));
+krone.SetzeRadius(groesse*2)
+    stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));
+stamm.SetzeGroesse(round(groesse * 0.2), round(groesse * 1.2));
   }
   void SetzeY(int yneu) {
     y = yneu;
+krone.SetzeKoordinaten(x, y - (round(groesse * 1.6)));
+krone.SetzeRadius(groesse*2)
+    stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));
+stamm.SetzeGroesse(round(groesse * 0.2), round(groesse * 1.2));
   }
   void SetzeGroesse(int groesseneu) {
     groesse = groesseneu;
+krone.SetzeKoordinaten(x, y - (round(groesse * 1.6)));
+krone.SetzeRadius(groesse*2)
+    stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));
+stamm.SetzeGroesse(round(groesse * 0.2), round(groesse * 1.2));
   }
 
   void SetzeKoordinaten(int xneu, int yneu) {
     x = xneu;
     y = yneu;
+krone.SetzeKoordinaten(x, y - (round(groesse * 1.6)));
+krone.SetzeRadius(groesse*2)
+    stamm.SetzeKoordinaten(x-(round(groesse * 0.2))/2, y - round(groesse * 1.2));
+stamm.SetzeGroesse(round(groesse * 0.2), round(groesse * 1.2));
   }
 
   void Wachse() {
