@@ -1,3 +1,4 @@
+//Andreas Fink 2019 - about 15min ;)
 class KREIS {
   int x;
   int y;

@@ -1,3 +1,4 @@
+//Andreas Fink 2019 - about 15min ;)
 class SCHEINWERFER {
   int x;
   int y;
