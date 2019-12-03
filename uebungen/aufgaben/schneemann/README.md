@@ -7,7 +7,6 @@
 1. Erzeuge einen weiteren Schneemann und setze ihn auf eine andere Stelle als den ersten. Ergänze dazu benötigte Klassen.
 
 
+BEACHTE: Du darfst, wenn Du es benötigst, Angaben umändern.
 
-> BEACHTE: Du darfst, wenn Du es benötigst, Angaben umändern.
-
-> TIPP: Ein Schneemann besteht aus drei Kreisen ;)
+TIPP: Ein Schneemann besteht aus drei Kreisen ;)
