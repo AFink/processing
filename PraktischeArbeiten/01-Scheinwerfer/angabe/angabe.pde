@@ -1,3 +1,13 @@
+
+// Das hier soll das Hauptprogramm sein. Sie muessen hier passende
+// Anweisungen, Deklarationen, ... ergaenzen.
+
+// Beachten Sie das Klassendiagramm. 
+
+
+
+
+
 void setup()
 {
     size(600,500);
