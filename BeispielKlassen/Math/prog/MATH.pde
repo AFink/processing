@@ -32,4 +32,24 @@ class MATH
        println("Fehler, keine quadratische Gleichung!");
     }
   }
+  
+  
+  void BerechneBMI(float m,float g){
+    float bmi = m/(g*g);
+    if(bmi<=19){
+      println("Untergewicht");
+     } else if(19<bmi && bmi<=24){
+      println("Normalgewicht");
+     } else if(24<bmi && bmi<=30){
+      println("Übergewicht");
+     }else if(30<bmi && bmi<=40){
+      println("Adipositas");
+     }else if(40<bmi){
+      println("schwere Adipositas");
+     }
+     }
+ 
+  
+  
+  
 }
