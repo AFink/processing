@@ -2,9 +2,14 @@ class FUTTER {
 
   float x;
   float y;
-  FUTTER(float x, float y) {
-    this.x = x;
-    this.y = y;
+  int hoehe;
+  int breite;
+  
+  FUTTER(float xneu, float yneu) {
+    x = xneu;
+    y = yneu;
+    hoehe = 10;
+    breite = 10;
   }
   
   void Bewege() {
@@ -15,6 +20,6 @@ class FUTTER {
   }
   
   void Zeichne() {
-   rect(x, y, 10, 10); 
+   rect(x, y, breite, hoehe); 
   }
 }

@@ -94,12 +94,18 @@ class FISCH {
     tex = loadImage(str(typ) + richtung + ".png");
   }
   
-  
-
     void SetzeRichtungRdm() {
     richtungen.shuffle();
     richtung = richtungen.get(1);  
     tex = loadImage(str(typ) + richtung + ".png");
+  }
+  
+  void SetzeHunger(int hungerneu){
+  hunger = hungerneu;  
+  }
+  
+  void SetzeTyp(int typneu){
+    typ = typneu;
   }
   
   void moveToFood(ArrayList<FUTTER> f) {
