@@ -143,19 +143,18 @@ class FISCH {
       this.SetzeRichtung("s");
     }  */
    
-    if (this.x > width - 35) {
+    if (this.x >= width - 70) {
       this.SetzeRichtungRdm();
-    }else if (this.x < 35) {
+    }else if (this.x <= 0) {
       this.SetzeRichtungRdm();
-    }else if (this.y > height - 35) {
+    }else if (this.y >= height - 70) {
       this.SetzeRichtungRdm();
-    }else if (this.y < 35) {
+    }else if (this.y <= 0) {
       this.SetzeRichtungRdm();
     } 
   }
 
   void Zeichne() {
-    imageMode(CENTER);
     image(tex, x, y);
   }
 }
