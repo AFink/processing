@@ -1,12 +1,12 @@
 class FISCH {
 
-  int x;
-  int y;
-  String richtung;
-  int hunger;
-  int typ;
-  PImage tex;
-  StringList richtungen;
+  private int x;
+  private int y;
+  private String richtung;
+  private int hunger;
+  private int typ;
+  private PImage tex;
+  private StringList richtungen;
 
   FISCH() {   
     x = 300;
@@ -59,11 +59,42 @@ class FISCH {
     typ = typneu;
     tex = loadImage(str(typ) + richtung + ".png");
   }
+  
+  int GibX(){
+    return x;
+    }
+  
+  int GibY(){
+    return y;
+  }
+  
+  String GibRichtung(){
+    return richtung;
+  }
+  
+  int GibHunger(){
+    return hunger;
+  }
+  
+  int GibTyp(){
+    return typ;
+  }
+  
+  void SetzeX(int xneu){
+    x = xneu;
+  }
 
+    void SetzeY(int yneu){
+    y = yneu;
+  }
+ 
+  
   void SetzeRichtung(String richtungneu) {
     richtung = richtungneu;  
     tex = loadImage(str(typ) + richtung + ".png");
   }
+  
+  
 
     void SetzeRichtungRdm() {
     richtungen.shuffle();
