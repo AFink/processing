@@ -15,7 +15,7 @@ class FUTTER {
   void Bewege() {
    if (y < height-10) {
     y += y*0.001; 
-    println(y);
+    //println(y);
    }
   }
   
