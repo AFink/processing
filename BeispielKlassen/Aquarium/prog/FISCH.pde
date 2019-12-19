@@ -101,6 +101,16 @@ class FISCH {
     richtung = richtungen.get(1);  
     tex = loadImage(str(typ) + richtung + ".png");
   }
+  
+  void moveToFood(ArrayList<FUTTER> f) {
+    try {
+      FUTTER n = f.get(0);
+      x -= (x - n.x) * 0.1; // VECTOR MAGIC
+      y -= (y - n.y) * 0.1;
+    } catch (Exception e) {
+      return;
+    }
+  }
 
   void Bewege(int speed) {
     if (richtung.contains("n")) {
