@@ -1,12 +1,13 @@
 class FISCH {
 
-  private int x;
-  private int y;
+  private float x;
+  private float y;
   private String richtung;
-  private int hunger;
+  private float hunger;
   private int typ;
   private PImage tex;
   private StringList richtungen;
+  private int timer;
 
   FISCH() {   
     x = 300;
@@ -24,9 +25,10 @@ class FISCH {
     hunger = 100;
     typ = 1;
     tex = loadImage(str(typ) + richtung + ".png");
+    timer = 30;
   }
 
-  FISCH(int xneu, int yneu) {   
+  FISCH(float xneu, float yneu) {   
     x = xneu;
     y = yneu;
     richtung = "o";
@@ -34,7 +36,7 @@ class FISCH {
     typ = 1;
     tex = loadImage(str(typ) + richtung + ".png");
   }
-  FISCH(int xneu, int yneu, String richtungneu) {   
+  FISCH(float xneu, float yneu, String richtungneu) {   
     x = xneu;
     y = yneu;
     richtung = richtungneu;
@@ -43,7 +45,7 @@ class FISCH {
     tex = loadImage(str(typ) + richtung + ".png");
   }
 
-  FISCH(int xneu, int yneu, String richtungneu, int hungerneu) {   
+  FISCH(float xneu, float yneu, String richtungneu, float hungerneu) {   
     x = xneu;
     y = yneu;
     richtung = richtungneu;
@@ -51,7 +53,7 @@ class FISCH {
     typ = 1;
     tex = loadImage(str(typ) + richtung + ".png");
   }
-  FISCH(int xneu, int yneu, String richtungneu, int hungerneu, int typneu) {   
+  FISCH(float xneu, float yneu, String richtungneu, float hungerneu, int typneu) {   
     x = xneu;
     y = yneu;
     richtung = richtungneu;
@@ -60,11 +62,11 @@ class FISCH {
     tex = loadImage(str(typ) + richtung + ".png");
   }
   
-  int GibX(){
+  float GibX(){
     return x;
     }
   
-  int GibY(){
+  float GibY(){
     return y;
   }
   
@@ -72,7 +74,7 @@ class FISCH {
     return richtung;
   }
   
-  int GibHunger(){
+  float GibHunger(){
     return hunger;
   }
   
@@ -80,11 +82,11 @@ class FISCH {
     return typ;
   }
   
-  void SetzeX(int xneu){
+  void SetzeX(float xneu){
     x = xneu;
   }
 
-    void SetzeY(int yneu){
+    void SetzeY(float yneu){
     y = yneu;
   }
  
@@ -95,13 +97,22 @@ class FISCH {
   }
   
     void SetzeRichtungRdm() {
+    timer++;
+    if (timer >= 1){
+    timer = 0;
     richtungen.shuffle();
     richtung = richtungen.get(1);  
     tex = loadImage(str(typ) + richtung + ".png");
+    }
+    
   }
   
-  void SetzeHunger(int hungerneu){
+  void SetzeHunger(float hungerneu){
   hunger = hungerneu;  
+  }
+  
+  void AddHunger(float hungerneu){
+    hunger = hunger + hungerneu;
   }
   
   void SetzeTyp(int typneu){
@@ -119,17 +130,36 @@ class FISCH {
   }
 
   void Bewege(int speed) {
+    if (hunger > 0){
+ //   hunger = hunger - random(0,0.01);  
+ hunger = hunger - random(0,0.1);  
+    if (hunger < 60){
+      this.moveToFood(essen);
+    }
+    } else {
+      hunger = 0;
+    }
+    println("HUNGER" + hunger);
+    float tmp = 1;
+    if (hunger <= 100){
+    tmp = hunger /100;
+    } else {
+    tmp = (100 - hunger) /100;
+    }
+    
+    
+    
     if (richtung.contains("n")) {
-      y = y - speed;
+      y = y - speed * tmp;
     }
     if (richtung.contains("o")) {
-      x = x + speed;
+      x = x + speed*tmp;
     }
     if (richtung.contains("s")) {
-      y = y + speed;
+      y = y + speed*tmp;
     }
     if (richtung.contains("w")) {
-      x = x - speed;
+      x = x - speed*tmp;
     } 
     
    /* 

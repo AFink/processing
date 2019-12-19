@@ -24,7 +24,7 @@ void draw() {
    for (FISCH i : fische) {
       i.Zeichne();
       i.Bewege(2);
-      i.moveToFood(essen);
+      
     }
  
   for (FUTTER i : essen) {
@@ -36,6 +36,7 @@ void draw() {
   for (FISCH fisch : fische) {
            if (fisch.GibX() + 70 > essen.get(index).x && fisch.GibX() < essen.get(index).x + essen.get(index).breite && fisch.GibY() + 33 > essen.get(index).y && fisch.GibY() < essen.get(index).y + essen.get(index).hoehe) {
     essen.remove(index);
+    fisch.AddHunger(10);
   } 
   else {
     fill(0, 255, 0);
