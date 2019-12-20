@@ -11,6 +11,7 @@ void setup() {
 
  // johannes = new FISCH();
   fische.add(new FISCH());
+  fische.add(new FISCH());
 }
 
 
@@ -31,7 +32,16 @@ void draw() {
       i.Zeichne();
       i.Bewege();
     }
+    
+    try {
+      for (int index = 0; index < fische.size(); index++) {
+        if (fische.get(index).GetHealth() < 0) {
+         fische.remove(index); 
+        }
+      }
+    } catch (Exception e) {}
 
+try {
   for (int index = 0; index < essen.size(); index++) {
   for (FISCH fisch : fische) {
            if (fisch.GibX() + 70 > essen.get(index).x && fisch.GibX() < essen.get(index).x + essen.get(index).breite && fisch.GibY() + 33 > essen.get(index).y && fisch.GibY() < essen.get(index).y + essen.get(index).hoehe) {
@@ -42,7 +52,7 @@ void draw() {
     fill(0, 255, 0);
   }
     }
-    }
+    }} catch (Exception e) {}
   
 }
 

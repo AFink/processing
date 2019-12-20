@@ -10,6 +10,9 @@ class FISCH {
   private PImage tex;
   private StringList richtungen;
   private int timer;
+  private int age = 0;
+  private int age_max = 1000;
+  private float health = 50;
 
   FISCH() {   
     x = 300;
@@ -93,6 +96,10 @@ class FISCH {
   int GibTyp() {
     return typ;
   }
+  
+  float GetHealth() {
+    return health;
+  }
 
   void SetzeX(float xneu) {
     x = xneu;
@@ -132,7 +139,7 @@ class FISCH {
 
   void moveToFood(ArrayList<FUTTER> f) {
     try {
-      FUTTER n = f.get(0);
+      FUTTER n = f.get(int(random(0, f.size())));
       x -= (x - n.x) * 0.1; // VECTOR MAGIC
       y -= (y - n.y) * 0.1;
     } 
@@ -142,6 +149,7 @@ class FISCH {
   }
 
   void Bewege(int speed) {
+    age++;
     if (hunger > 0) {
       //   hunger = hunger - random(0,0.01);  
       hunger = hunger - random(0, 0.1);  
@@ -151,7 +159,12 @@ class FISCH {
     } else {
       hunger = 0;
     }
-    println("HUNGER : " + hunger);
+    if (hunger < hunger_min) {
+      health -= 0.01;
+    }
+    health += 0.001 * ((float(age_max)-float(age))/age_max);
+    print("HEALTH : " + health);
+    println(" AGE : " + age);
     float tmp = 1;
     if (hunger <= 100) {
       tmp = hunger /100;
