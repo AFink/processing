@@ -139,8 +139,14 @@ class FISCH {
 
   void moveToFood(ArrayList<FUTTER> f) {
     try {
-      //FUTTER n = f.get(int(random(0, f.size())));
-      FUTTER n = f.get(int(f.size()/age));
+      FUTTER n = f.get(0);
+      float dist = 1000;
+      for (FUTTER i : essen) {
+        float ndist = dist(this.x, this.y, i.x, i.y);
+        if (ndist < dist) {
+         n = i; 
+        }
+      }
       x -= (x - n.x) * 0.1; // VECTOR MAGIC
       y -= (y - n.y) * 0.1;
     } 
