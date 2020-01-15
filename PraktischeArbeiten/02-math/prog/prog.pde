@@ -1,5 +1,4 @@
-// siehe Anmerkungen in der Klasse MATHE
-// ansonsten toll geloest, Note 1
+// fast Musterlösung, MATHE.pde beachten :3
 MATHE andi;
 
 
