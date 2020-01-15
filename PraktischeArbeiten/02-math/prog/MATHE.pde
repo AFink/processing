@@ -8,9 +8,9 @@ class MATHE {
 
 
   void BerechneQuadrat(float zahl) {
-    float tmp = zahl * zahl;      // hier haette man nun speicher einsetzen koennen.
+    speicher = zahl * zahl;
 
-    System.out.println(tmp);
+    System.out.println(speicher);
   }
 
   void SchreibeBetragVon(float zahl) {
