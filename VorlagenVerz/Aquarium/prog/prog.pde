@@ -1,23 +1,22 @@
 /* @pjs preload="fisch.png"; */
 
-FISCH egon;
-FISCHFELD andi;
+FISCH Marss;
+FISCHFELD Samsora;
 
 void setup()
 {
-  size(800, 525);
+  size(1000, 1000);
   background(#00BFFF);
-  egon = new FISCH(10, 400);
-  andi = new FISCHFELD();
+  Marss = new FISCH(100, 100);
+  Samsora = new FISCHFELD();
 }
 
 
 void draw()
 {
   background(#00BFFF);
-  egon.ZeichneFisch();
-  egon.Bewege(1);
-  andi.ZeichneAlles();
-  andi.BewegeAlles();
+  Marss.ZeichneFisch();
+  Marss.Bewege(1);
+  Samsora.ZeichneAlles();
+  Samsora.BewegeAlles();
 }
-
