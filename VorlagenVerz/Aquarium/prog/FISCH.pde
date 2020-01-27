@@ -32,7 +32,7 @@ class FISCH
   void Bewege(float zeit)
   {
     x = x + zeit*v;
-  }
+ 
   
 }
-    
+}  
