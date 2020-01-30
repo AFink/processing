@@ -18,7 +18,7 @@ class FISCHFELD {
   void ZeichneAlles() {
 
     for (int i=0;i < 99; i++) {
-      feld[i].ZeichneFisch();   //rdm weil sonst wäre alle aufeinander
+      feld[i].ZeichneFisch();
     }
   }
 
@@ -26,7 +26,7 @@ class FISCHFELD {
   void BewegeAlles() {
 
     for (int i=0;i < 99; i++) {
-      feld[i].Bewege(1);   //rdm weil sonst wäre alle aufeinander
+      feld[i].Bewege(1);
     }
   }
 }
