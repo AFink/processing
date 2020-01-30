@@ -20,10 +20,10 @@ class BAUM {
     return y;
   }
 
-  void setzeX(float xNeu){
+  void setzeX(float xNeu) {
     x = xNeu;
   }
-    void setzeY(float yNeu){
+  void setzeY(float yNeu) {
     y = yNeu;
   }
   void Bewege() {
