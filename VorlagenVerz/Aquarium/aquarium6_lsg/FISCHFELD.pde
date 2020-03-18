@@ -8,14 +8,24 @@ class FISCHFELD
        
        feld = new FISCH [50];
        int auswahl =0;
+       int auswahl2 = 0;
        for (int i=0;i< feld.length;i++)     // statt 100 koennte feld.length verwendet werden; in diesem Attribut wird automatisch
                                     // die Groesse des Feldes gespeichert.
        {
          auswahl = (int) random(2);
          if (auswahl == 0)
          {
+                 auswahl2 = (int) random(2);
+         if (auswahl2 == 0)
+         {
                  feld[i]  = new ZITRONE(random(0,600),random(0,200));           // dieser Wert 100 hat mit obigem Wert nichts zu tun, das ist nur die
                               // x-Koordinate des erzeugten Fisches
+         }
+         else 
+         {
+           feld[i]  = new HERING(random(0,600),random(0,height/3));           // dieser Wert 100 hat mit obigem Wert nichts zu tun, das ist nur die
+                              // x-Koordinate des erzeugten Fisches
+         }
          }
          else 
          {
